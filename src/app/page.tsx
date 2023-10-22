@@ -11,7 +11,7 @@ export default function Home() {
             key={index}
           >
             <img
-              src={`https://picsum.photos/seed/${index * 10}/1200/1800`}
+              src={`https://picsum.photos/seed/${index * 10}/2400/1600`}
               alt="Image 1"
               className="w-full h-full object-cover"
               loading="lazy"

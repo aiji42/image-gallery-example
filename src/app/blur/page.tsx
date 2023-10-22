@@ -11,10 +11,10 @@ export default function Page() {
             key={index}
           >
             <img
-              src={`https://img-optmize.aiji42.com?src=https://picsum.photos/seed/${
+              src={`https://img-optmize.aiji42.com?blur=1&minimize=1&polish=1&src=https://picsum.photos/seed/${
                 index * 10
-              }/1200/1800`}
-              alt="Image 1"
+              }/2400/1600`}
+              alt="Image"
               className="w-full h-full object-cover"
               loading="lazy"
             />
