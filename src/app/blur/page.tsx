@@ -1,6 +1,9 @@
-import Image from "next/image";
-
-export default function Page() {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}) {
+  const pad = Number(searchParams.pad);
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-8 text-slate-400">Image Gallery</h1>
@@ -12,7 +15,7 @@ export default function Page() {
           >
             <img
               src={`https://img-optmize.aiji42.com?blur=1&minimize=1&polish=1&src=https://picsum.photos/seed/${
-                index * 10
+                index * 10 + (Number.isSafeInteger(pad) ? pad : 0)
               }/2400/1600`}
               alt="Image"
               className="w-full h-full object-cover"
